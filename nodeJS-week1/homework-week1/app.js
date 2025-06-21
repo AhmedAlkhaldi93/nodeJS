@@ -21,14 +21,13 @@ app.get("/search", (req, res) => {
 
 app.get("/documents/:id", (req, res) => {
   const id = Number(req.params.id);
-  console.log(id);
 
   const searchByID = documents.find(doc => doc.id === id);
 
   if(!searchByID){
     return res.status(404).json({ error: "This ID does not exist." });
   }else{
-    res.send(searchByID);
+    res.json(searchByID);
   }
 });
 
