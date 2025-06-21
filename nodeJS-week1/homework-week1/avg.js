@@ -8,7 +8,7 @@ if(args.length === 0){
     for(let i= 0; i < args.length; i++){
         sum = sum + Number(args[i]);
         if (isNaN(sum)) {
-            console.log(Invalid number: "${args[i]}");
+            console.log(`Invalid number: "${args[i]}"`);
             process.exit(1);
         }
     }
